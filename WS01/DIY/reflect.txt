@@ -1,0 +1,25 @@
+/* ------------------------------------------------------
+Workshop 1 Reflection
+Module: directory
+Filename: reflect.txt
+Author	KOJO ANYANE OBESE
+-----------------------------------------------------------
+Date       Reason
+-----------------------------------------------------------*/
+
+After this Workshop, I learnt the following about C++ and object oriented programming:
+a. How to create modules
+b. How to compile modules
+c. Submit workshop in this course
+
+For w1p1, it was quite easy as we were given steps to follow. And for the w2p2, I had first 
+write out a pseudocode for what I need my program to do and then read through the syntax online 
+and find what functions I will need to execute my code. 
+
+My Phone.cpp source code defines a program within the sdds namespace called phoneDir which conducts a phone directory search.
+It takes 2 parameters which are programTitle and fileName. Upon execution, it displays a title.
+It then tries to open the file it accepted but displays an error message if it fails to open the file.
+if file is successfully open and read, then we enter a loop where we prompt the user to enter the name
+that is going to be searched. Also, if the user enters "!", we exit the loop. Upon exiting, we close the
+file we opened. In the loop, we compare the string of words typed and display the number in the format 
+we specified.
