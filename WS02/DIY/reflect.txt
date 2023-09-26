@@ -1,0 +1,9 @@
+This code manages postal code and population data within the sdds namespace. It 
+begins by defining a custom startsWith function to check if a string starts with a specific
+substring. The getPostalCode function prompts the user for a postal code prefix. The load 
+function reads data from a file, filters it based on the given postal code prefix, and dynamically
+allocates memory to store matching data in the postcodes array. The display function then shows a 
+population report, listing postal codes and their populations, while calculating the total population 
+of the listed areas.
+One notable aspect of this code is its use of dynamic memory allocation with the new operator to manage 
+the postcodes array. 
