@@ -34,17 +34,15 @@ namespace sdds {
    }
    // TODO: read functions go here   
    bool read(char *nameEmp) {
-       int ret = fscanf(fptr, "%[^\n]\n", nameEmp);
-       return ret ? 1 : 0;   
-   
+      return fscanf(fptr, "%[^\n]\n", nameEmp) == 1;
    }
+
    bool read(int& numEmp) {
-      int ret = fscanf(fptr, "%d,", &numEmp);
-       return ret ? 1 : 0;
+      return fscanf(fptr, "%d,", &numEmp) == 1;
    }
+   
    bool read(double& salEmp) {
-      int ret = fscanf(fptr, "%lf,", &salEmp);
-       return ret ? 1 : 0;
+      return fscanf(fptr, "%lf,", &salEmp) == 1;
    }
    
 }

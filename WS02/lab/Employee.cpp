@@ -10,6 +10,7 @@
 // -----------------------------------------------------------
 // Name            Date            Reason
 ***********************************************************************/
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
 #include "Employee.h"
@@ -38,66 +39,61 @@ namespace sdds {
    // TODO: Finish the implementation of the 1 arg load function which
    // reads one employee record from the file and loads it into the employee reference
    // argument
-   bool load(Employee &emp) {
+   bool load(Employee& emp) {
       bool ok = false;
       char name[128];
       // return the combined success result of the three read functions. These read 
       // functions should set the properties of the reference argument of the load function
-      if(read(emp.m_empNo) && read(emp.m_salary) && read(emp.m_name)){
-         int Len = strlen(name);
-           
-          emp.m_name = new char[Len + 1];
-          strcpy(emp.m_name, name);
-      }
+      if (read((emp.m_empNo)) && read((emp.m_salary)) && read(name))
+        {
+            int nameLength = strlen(name) + 1;
+            emp.m_name = new char[nameLength];
+            strcpy(emp.m_name, name);
+            ok = true;
+        }
       return ok;
    }
+
    // TODO: Finish the implementation of the 0 arg load function 
    bool load() {
       bool ok = false;
       int i = 0;
-      if (openFile(DATAFILE)) 
-      { 
-
-          noOfEmployees = noOfRecords();
-          employees = new Employee[noOfEmployees];
-
-          while (i < noOfEmployees) {
-              ok = load(employees[i]);
-              i++;
-          }
-          if (i != noOfEmployees){
-              ok = 0;
-              cout << "Error: incorrect number of records read; the data is possibly corrupted" << endl;
-          }
-        
-      }
-      else {
-          cout << "Could not open data file: " << DATAFILE << endl;
-      }
-      closeFile();
-      return ok;
-   }
+        if (openFile(DATAFILE)) {
+            noOfEmployees = noOfRecords();
+            employees = new Employee[noOfEmployees];
+            //Load the employee records from the file into the dynamic array.
+            for (i = 0; i < noOfEmployees && !ok ; i++) {
+                if (!load(employees[i])) {
+                    cout << "Error: incorrect number of records read; the data is possibly corrupted." << endl;
+                    ok = true;
+                }
+            }
+            closeFile();
+        }
+        else {
+            cout << "Could not open data file: " << DATAFILE << endl;
+        }
+ 
+      return !ok;
+    }
 
    // TODO: Implementation for the display functions go here
+
+   void display(const Employee& emp) {
+       cout << emp.m_empNo << ": " << emp.m_name << ", $" << emp.m_salary << endl;
+   }
+
    void display() {
        int i = 0;
        cout << "Employee Salary report, sorted by employee number" << endl;
        cout << "no- Empno, Name, Salary" << endl;
        cout << "------------------------------------------------" << endl;
        sort(); 
-       while (i < noOfEmployees)
-       {
-           cout << i + 1 << "- "; 
-           display(employees[i]);
-           i++;
-       }
+       for (i = 0; i < noOfEmployees; i++) {
+            cout << i + 1 << "- ";
+            display(employees[i]);
+        }
    }
-
-   void display(const Employee& emp)
-   {
-       cout << emp.m_empNo << ": " << emp.m_name << ", " << emp.m_salary << endl;
-   }
-
 
    // TODO: Implementation for the deallocateMemory function goes here
    void deallocateMemory() {
@@ -108,7 +104,6 @@ namespace sdds {
        delete[] employees; 
        employees = nullptr;
    }
-
 
 
 }
