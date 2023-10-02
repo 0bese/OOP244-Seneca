@@ -14,12 +14,10 @@
 #define SDDS_FILE_H_
 namespace sdds {
    bool openFile(const char filename[]);
-   void closeFile();
-   bool read(char* &postalCode);
-	bool read(unsigned int &population);
-	void rewindFile();
-	int sizeOfList();
-
-
+    void closeFile();
+    int noOfRecords();
+    bool read(char*& name);
+    bool read(int& empNo);
+    bool read(double& salary);
 }
 #endif // !SDDS_FILE_H_
