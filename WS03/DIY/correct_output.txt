@@ -1,0 +1,75 @@
+----------------------------------------
+1. Testing the load function.
+----------------------------------------
+Enter number of passengers boarding:
+> 250
+Boarding Complete...
+Enter number of passengers boarding:
+> 250
+Train is full, 100 passengers could not be boarded.
+----------------------------------------
+2. Testing the updateDepartureTime function.
+----------------------------------------
+Departure time is 1455
+Enter new departure time:
+> 300
+Invalid departure time, valid times are between 700 and 2300!
+Enter new departure time:
+> 1577
+Invalid departure time, valid times are between 700 and 2300!
+Enter new departure time:
+> 1533
+New departuer time is 1533
+----------------------------------------
+3. Testing the transfer function.
+----------------------------------------
+TRANSFERING
+   FROM: 
+Train in an invalid State!
+   TO:
+NAME OF THE TRAIN:    Seneca Express C
+NUMBER OF PASSENGERS: 450
+DEPARTURE TIME:       2255
+---->
+Transfer Failed!
+
+TRANSFERING
+   FROM: 
+NAME OF THE TRAIN:    Seneca Express C
+NUMBER OF PASSENGERS: 450
+DEPARTURE TIME:       2255
+   TO:
+Train in an invalid State!
+---->
+Transfer Failed!
+
+TRANSFERING
+   FROM: 
+NAME OF THE TRAIN:    Seneca Express A
+NUMBER OF PASSENGERS: 50
+DEPARTURE TIME:       2200
+   TO:
+NAME OF THE TRAIN:    Seneca Express C
+NUMBER OF PASSENGERS: 450
+DEPARTURE TIME:       2255
+---->
+Transfer Complete:
+NAME OF THE TRAIN:    Seneca Express C, Seneca Express A
+NUMBER OF PASSENGERS: 500
+DEPARTURE TIME:       2255
+
+TRANSFERING
+   FROM: 
+NAME OF THE TRAIN:    Seneca Express C, Seneca Express A
+NUMBER OF PASSENGERS: 500
+DEPARTURE TIME:       2255
+   TO:
+NAME OF THE TRAIN:    Seneca Espress D
+NUMBER OF PASSENGERS: 560
+DEPARTURE TIME:       1022
+---->
+Train is full; 60 passengers of Seneca Express C, Seneca Express A could not be boarded!
+Transfer Complete:
+NAME OF THE TRAIN:    Seneca Espress D, Seneca Express C, Seneca Express A
+NUMBER OF PASSENGERS: 1000
+DEPARTURE TIME:       1022

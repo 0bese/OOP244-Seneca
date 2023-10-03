@@ -1,0 +1,38 @@
+----------------------------------------
+1. Testing the validation logic.
+(only trains[6] should be valid)
+----------------------------------------
+trains[0]: not valid
+trains[1]: not valid
+trains[2]: not valid
+trains[3]: not valid
+trains[4]: not valid
+trains[5]: not valid
+trains[6]: valid
+----------------------------------------
+
+----------------------------------------
+2. Testing the display function.
+----------------------------------------
+Train in an invalid State!
+Train in an invalid State!
+Train in an invalid State!
+Train in an invalid State!
+Train in an invalid State!
+Train in an invalid State!
+NAME OF THE TRAIN:    VIA Rail Abitibi
+NUMBER OF PASSENGERS: 333
+DEPARTURE TIME:       2055
+----------------------------------------
+
+----------------------------------------
+3. Testing the member functions.
+----------------------------------------
+1: *************
+2: Seneca Express B leaves at 736 with 255 passengers.
+3: Seneca Express C leaves at 842 with 410 passengers.
+4: Seneca Express D leaves at 948 with 565 passengers.
+5: Seneca Express E leaves at 1054 with 720 passengers.
+6: *************
+7: *************
+----------------------------------------
