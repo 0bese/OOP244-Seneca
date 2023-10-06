@@ -17,7 +17,7 @@ using namespace std;
 using namespace sdds;
 void transfer(Train& to, const Train& from);
 int main() {
-	int i{};
+	int i{ };
 	int notBoarded;
 	Train A, B, C, D;
 	A.initialize();
