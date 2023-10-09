@@ -1,0 +1,47 @@
++------------------------------------------------------------------------------+
+ Flight  |  Empty Plane
+ Flight  |  Ready to Depart     MD 432 | Pass:        100 |     65000.00 Liters
+ Flight  |  Ready to Depart    CAD 453 | Pass:        300 |    195000.00 Liters
+ Flight  |  Ready to Depart    IND 678 | Pass:        150 |     97500.00 Liters
+ Flight  |  Ready to Depart    FRN 435 | Pass:         70 |     45500.00 Liters
+ Flight  |  Empty Plane
+ Flight  |  Low Fuel           ZAA 500 | Pass:        270 |     17550.00 Liters
++------------------------------------------------------------------------------+
+ Total passengers in CAD 453 and FRN 435 is:  370
+ Total fuel in CAD 453 and FRN 435 is:  240500.00
++------------------------------------------------------------------------------+
+ Total passengers in MD 432 and IND 678 is:  250
+ Total fuel in MD 432 and IND 678 is:  162500.00
++------------------------------------------------------------------------------+
+ Total passengers in MD 432 is:  100
+ Total passengers in CAD 453 is:  300
+ Total passengers in IND 678 is:  150
+ Total passengers in FRN 435 is:  70
++------------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+ Flight  |  Empty Plane
+ Flight  |  Empty Plane
+ Flight  |  Ready to Depart    CAD 453 | Pass:         62 |    195000.00 Liters
+ Flight  |  Low Fuel           IND 678 | Pass:        388 |     97500.00 Liters
+ Flight  |  Ready to Depart    FRN 435 | Pass:         70 |     45500.00 Liters
+ Flight  |  Ready to Depart     MD 432 | Pass:        100 |     65000.00 Liters
+ Flight  |  Low Fuel           ZAA 500 | Pass:        270 |     17550.00 Liters
++------------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+ Flight  |  Empty Plane
+ Flight  |  Empty Plane
+ Flight  |  Ready to Depart    CAD 453 | Pass:        262 |    195000.00 Liters
+ Flight  |  Ready to Depart    IND 678 | Pass:         88 |     97500.00 Liters
+ Flight  |  Low Fuel           FRN 435 | Pass:         70 |     30499.50 Liters
+ Flight  |  Ready to Depart     MD 432 | Pass:        100 |     65000.00 Liters
+ Flight  |  Ready to Depart    ZAA 500 | Pass:        270 |    177550.50 Liters
++------------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+ Flight  |  Low Fuel        EmptyPlane | Pass:        300 |         0.00 Liters
+ Flight  |  Empty Plane
+ Flight  |  Ready to Depart    CAD 453 | Pass:        262 |    195000.00 Liters
+ Flight  |  Ready to Depart    IND 678 | Pass:         88 |     97500.00 Liters
+ Flight  |  Ready to Depart    FRN 435 | Pass:         70 |    200000.50 Liters
+ Flight  |  Ready to Depart     MD 432 | Pass:        100 |     65000.00 Liters
+ Flight  |  Ready to Depart    ZAA 500 | Pass:        270 |    177550.50 Liters
++------------------------------------------------------------------------------+

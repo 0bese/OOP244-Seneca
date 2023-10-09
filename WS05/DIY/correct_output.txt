@@ -1,0 +1,36 @@
++----------------------------------------------------------------+
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  Active |     Fitzer | Value:     400000 |  Type: G
+ Portfolio  |  Active |      Honda | Value:     500000 |  Type: I
+ Portfolio  |  Active |        RIM | Value:     140000 |  Type: V
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  Active |      Nvdia | Value:      95000 |  Type: G
++----------------------------------------------------------------+
+ Total Investment in Honda and Nvdia is:  595000
+ Total Investment in Fitzer and RIM is:  540000
++----------------------------------------------------------------+
+ Total Investment in Fitzer and Nvdia is:  495000
++----------------------------------------------------------------+
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  Active |     Fitzer | Value:     495000 |  Type: G
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  Active |        RIM | Value:     640000 |  Type: V
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
++----------------------------------------------------------------+
++----------------------------------------------------------------+
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  Active |     Fitzer | Value:     495000 |  Type: G
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  Active |        RIM | Value:     640000 |  Type: V
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
++----------------------------------------------------------------+
++----------------------------------------------------------------+
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  Active |     Fitzer | Value:     400000 |  Type: G
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  Active |        RIM | Value:     700000 |  Type: V
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
+ Portfolio  |  EMPTY  |            | Value:          0 |  Type: E
++----------------------------------------------------------------+

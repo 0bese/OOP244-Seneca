@@ -1,0 +1,20 @@
+Information was set correctly!
+Information was set incorrectly!
+                       ----- Car Inventory Information -----
+
+| Type       | Brand            | Model            | Year | Code |     Price |
++------------+------------------+------------------+------+------+-----------+
+| SUV        | Volvo            | XC90             | 2019 |  109 |  80000.00 |
+| Sedan      | BMW              | M550i            | 2022 |  101 |  91000.00 |
+| Truck      | Tesla            | Cybertruck       | 2021 |  102 |  65000.00 |
+| Sedan      | BMW              | M550i            | 2022 |  100 |      1.00 |
+
+******************************************************************************
+*  WARNING: There are invalid data in the inventory!                         *
+******************************************************************************
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++  WARNING: There are similar entries in the inventory!                      +
+| Sedan      | BMW              | M550i            | 2022 |  101 |  91000.00 |
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
