@@ -1,0 +1,16 @@
+/*==============================================
+Name:           Kojo Anyane Obese
+Student Number: 137653226
+Email:          kaobese@myseneca.ca
+Section:        NHH
+Workshop:       Workshop4_DIY
+==============================================*/
+
+In this Workshop I delved deeper into object oriented programming. 
+I got better understanding through creating and using the CarInventory class, 
+Label class and LabelMaker class which taught me about data encapsulation and 
+the effective utilization of class methods. Using dynamic memory management in 
+the lab, I had to manage character arrays to store strings and ensure proper 
+memory deallocation in the class's destructor to avoid memory leak while for 
+the DIY I tackled dynamic character arrays for label content, understanding 
+how to allocate and deallocate memory correctly.
