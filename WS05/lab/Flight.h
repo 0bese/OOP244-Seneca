@@ -30,7 +30,26 @@ namespace sdds {
       Flight();
       Flight(int passengers, double fuel, const char* title);
       std::ostream& display()const;
+      //ToDo
+      operator bool() const;
+      operator int() const;
+      operator double() const;
+      operator const char*() const;
+      bool operator ~() const;
+      Flight& operator =(Flight& flight);
+      Flight& operator =(int newNumberOfPassengers);
+      Flight& operator =(double newAmountOfFuel);
+      Flight& operator +=(double newAmountOfFuel);
+      Flight& operator +=(int newNumberOfPassengers);
+      Flight& operator -=(double newAmountOfFuel);
+      Flight& operator -=(int newNumberOfPassengers);
+      Flight& operator <<(Flight& flight);
+      Flight& operator >>(Flight &flight);
    };
+
+   //ToDo
+   int operator +(const Flight& left, const Flight& right);
+   int& operator +=(int& left, const Flight& right);
 
 }
 #endif // SDDS_FLIGHT_H
