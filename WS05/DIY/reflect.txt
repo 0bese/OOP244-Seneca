@@ -1,0 +1,18 @@
+/*==============================================
+Name:           Kojo Anyane Obese
+Student Number: 137653226
+Email:          kaobese@myseneca.ca
+Section:        NHH
+Workshop:       Workshop5_DIY
+==============================================*/
+
+In this workshop, I learned how to create and implement overloaded operators in C++ to
+enable custom behavior for user-defined types like the Flight class. 
+The Flight class demonstrates how these custom operators can enhance the handling of flight-
+related data, making it easier to work with flight information.
+I gained hands-on experience with operator overloading, as demonstrated in the Portfolio class. 
+The code showcases how operator overloading can be used to create a custom and intuitive interface 
+for working with Portfolio objects, enabling operations like addition, subtraction, and streaming output. 
+This practical application of operator overloading enhances code readability and usability.
+By overloading operators, we can encapsulate complex logic within the class, promoting encapsulation
+and reusability while improving the readability and maintainability of the code. 

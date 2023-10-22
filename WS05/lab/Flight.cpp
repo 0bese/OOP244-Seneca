@@ -27,6 +27,7 @@ namespace sdds {
     Flight::Flight() {
         emptyPlane();
     }
+
     Flight::Flight(int passengers, double fuel, const char* title) {
         emptyPlane();
         if (passengers > 0 && passengers <= Boen747Capacity && fuel >= 0 &&
@@ -36,8 +37,9 @@ namespace sdds {
             strcpy(m_title,title);
         }
     }
-    std::ostream& Flight::display() const {
 
+
+    std::ostream& Flight::display() const {
         if (*this) {
             cout << " Flight  |  Ready to Depart";
             cout << " ";
@@ -79,143 +81,140 @@ namespace sdds {
         }
         return cout;
     }
+
+
     Flight::operator bool() const{
-    double minimumFuel = 600 * m_passengers;
-    return m_passengers > 0 && m_fuel >= minimumFuel;
+        double minimumFuel = 600 * m_passengers;
+        return m_passengers > 0 && m_fuel >= minimumFuel;
     }
 
-Flight::operator int() const{
-    return m_passengers;
-}
+    Flight::operator int() const{
+        return m_passengers;
+    }
 
-Flight::operator double() const{
-    return m_fuel;
-}
+    Flight::operator double() const{
+        return m_fuel;
+    }
 
-Flight::operator const char*() const{
-    return m_title;
-}
+    Flight::operator const char*() const{
+        return m_title;
+    }
 
-bool Flight::operator ~() const{
-    return m_passengers == 0;
-    
-}
-
-Flight& Flight::operator=(Flight& flight){
-    m_passengers = flight.m_passengers;
-    m_fuel = flight.m_fuel;
-    strcpy(m_title, flight.m_title);
-    flight.emptyPlane();
-    return *this;
-}
-
-Flight& Flight::operator=(int newNumberOfPassengers){
-    
-    if(newNumberOfPassengers > 0 && newNumberOfPassengers <= Boen747Capacity ){
-        m_passengers = newNumberOfPassengers;
+    bool Flight::operator ~() const{
+        return m_passengers == 0;
         
     }
-    return *this;
-    
-}
 
-Flight& Flight::operator=(double newAmountOfFuel){
-    if(newAmountOfFuel > 0 && newAmountOfFuel < FuelTankCapacity){
-        m_fuel = newAmountOfFuel;
+    Flight& Flight::operator=(Flight& flight){
+        m_passengers = flight.m_passengers;
+        m_fuel = flight.m_fuel;
+        strcpy(m_title, flight.m_title);
+        flight.emptyPlane();
+        return *this;
     }
-    return *this;
-}
 
-Flight& Flight::operator +=(double newAmountOfFuel){
-    if (newAmountOfFuel > 0 && m_fuel < FuelTankCapacity ) {
-        m_fuel += newAmountOfFuel;
-        if( m_fuel > FuelTankCapacity){
-            m_fuel = FuelTankCapacity;
+    Flight& Flight::operator=(int newNumberOfPassengers){
+        if(newNumberOfPassengers > 0 && newNumberOfPassengers <= Boen747Capacity ){
+            m_passengers = newNumberOfPassengers;
             
         }
+        return *this;
+        
     }
-    return *this;
-}
 
-Flight& Flight::operator +=(int newNumberOfPassengers){
-    if(newNumberOfPassengers > 0 && m_passengers < newNumberOfPassengers ) {
-        m_passengers += newNumberOfPassengers;
-        if( m_passengers > Boen747Capacity){
-            m_passengers = Boen747Capacity;
-            
+    Flight& Flight::operator=(double newAmountOfFuel){
+        if(newAmountOfFuel > 0 && newAmountOfFuel < FuelTankCapacity){
+            m_fuel = newAmountOfFuel;
         }
+        return *this;
     }
-    return *this;
-}
 
-Flight& Flight::operator -=(double newAmountOfFuel){
-    if(newAmountOfFuel > 0){
-        m_fuel -= newAmountOfFuel;
-        if(m_fuel < 0){
-            m_fuel = 0;
+    Flight& Flight::operator +=(double newAmountOfFuel){
+        if (newAmountOfFuel > 0 && m_fuel < FuelTankCapacity ) {
+            m_fuel += newAmountOfFuel;
+            if( m_fuel > FuelTankCapacity){
+                m_fuel = FuelTankCapacity;
+                
+            }
         }
+        return *this;
     }
-    return *this;
-}
 
-Flight& Flight::operator -=(int newNumberOfPassengers){
-    if(newNumberOfPassengers > 0){
-        m_passengers -= newNumberOfPassengers;
-        if(m_passengers < 0){
-            m_passengers = 0;
+    Flight& Flight::operator +=(int newNumberOfPassengers){
+        if(newNumberOfPassengers > 0 && m_passengers < newNumberOfPassengers ) {
+            m_passengers += newNumberOfPassengers;
+            if( m_passengers > Boen747Capacity){
+                m_passengers = Boen747Capacity;
+                
+            }
         }
+        return *this;
     }
-    return *this;
-}
-Flight& Flight::operator <<(Flight& flight){
-    if(this != &flight && *this && flight){
-        m_passengers += flight.m_passengers;
-        if ( m_passengers > Boen747Capacity){
-            flight.m_passengers = m_passengers - Boen747Capacity;
-            m_passengers = Boen747Capacity;
-        }
-        else{
-            flight.m_passengers = 0;
-        }
-    }
-    return *this;
-}
 
-Flight& Flight::operator >>(Flight &right){
-    
-    Flight& left = *this;
-    
-    if(&left != &right && left && right){
-        right.m_passengers += left.m_passengers;
-        if(right.m_passengers > Boen747Capacity){
-            left.m_passengers = right.m_passengers - Boen747Capacity;
-            right.m_passengers = Boen747Capacity;
+    Flight& Flight::operator -=(double newAmountOfFuel){
+        if(newAmountOfFuel > 0){
+            m_fuel -= newAmountOfFuel;
+            if(m_fuel < 0){
+                m_fuel = 0;
+            }
         }
-        else{
-            left.m_passengers = 0;
+        return *this;
+    }
+
+    Flight& Flight::operator -=(int newNumberOfPassengers){
+        if(newNumberOfPassengers > 0){
+            m_passengers -= newNumberOfPassengers;
+            if(m_passengers < 0){
+                m_passengers = 0;
+            }
         }
+        return *this;
     }
-    
-    return *this;
-    
-}
+    Flight& Flight::operator <<(Flight& flight){
+        if(this != &flight && *this && flight){
+            m_passengers += flight.m_passengers;
+            if ( m_passengers > Boen747Capacity){
+                flight.m_passengers = m_passengers - Boen747Capacity;
+                m_passengers = Boen747Capacity;
+            }
+            else{
+                flight.m_passengers = 0;
+            }
+        }
+        return *this;
+    }
 
-int operator +(const Flight& left, const Flight& right) {
-    
-    int sum = 0;
-    if(left && right){
-        sum = (int(left)) + (int(right));
+    Flight& Flight::operator >>(Flight &right){
+        Flight& left = *this;
+        if(&left != &right && left && right){
+            right.m_passengers += left.m_passengers;
+            if(right.m_passengers > Boen747Capacity){
+                left.m_passengers = right.m_passengers - Boen747Capacity;
+                right.m_passengers = Boen747Capacity;
+            }
+            else{
+                left.m_passengers = 0;
+            }
+        }
+        
+        return *this;
+        
     }
-    return sum;
-}
 
-int& operator +=(int& left, const Flight& right) {
-    
-    if(right){
-        left += (int(right));
+    int operator +(const Flight& left, const Flight& right) {   
+        int sum = 0;
+        if(left && right){
+            sum = (int(left)) + (int(right));
+        }
+        return sum;
     }
-    return left;
-    
-}
+
+    int& operator +=(int& left, const Flight& right) {   
+        if(right){
+            left += (int(right));
+        }
+        return left;
+        
+    }
 }
 
