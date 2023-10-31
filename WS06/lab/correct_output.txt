@@ -1,0 +1,87 @@
+Validation Test
+Fred Soley........................................1234567890-AB, WQ1234567
+Invalid Health Card Record
+Invalid Health Card Record
+Invalid Health Card Record
+Fred Soley........................................1234567890-AB, WQ1234567
+Invalid Health Card Record
+Invalid Health Card Record
+Invalid Health Card Record
+
+Data entry test.
+Enter the test data using copy and paste to save time:
+
+Enter the following:
+>Person Name,1231231234-XL,AF1234567
+>Person Name,1231231234-XL,AF1234567
+HealthCard Content:
+Person Name.......................................1231231234-XL, AF1234567
+Enter the following:
+>Person Name,1231231234-XL,AF123456
+>Person Name,1231231234-XL,AF123456
+HealthCard Content:
+Invalid Health Card Record
+Enter the following:
+>Person Name,1231231234-L,AF1234567
+>Person Name,1231231234-L,AF1234567
+HealthCard Content:
+Invalid Health Card Record
+Enter the following:
+>Person Name,1231231234-,AF1234567
+>Person Name,1231231234-,AF1234567
+HealthCard Content:
+Invalid Health Card Record
+Enter the following:
+>Person Name,131231234-XL,AF1234567
+>Person Name,131231234-XL,AF1234567
+HealthCard Content:
+Invalid Health Card Record
+Enter the following:
+>Person Name 1231231234-XL,AF1234567
+>Person Name 1231231234-XL,AF1234567
+HealthCard Content:
+Invalid Health Card Record
+Invalid Health Card Record
+2Person Name2.....................................1231231234-XL, AF1234567
+Invalid Health Card Record
+4Person Name3.....................................1231231234-XL, AF1234567
+Invalid Health Card Record
+Invalid Health Card Record
+Invalid Health Card Record
+8Person Name7.....................................1231231234-XL, AF1234567
+Invalid Health Card Record
+Invalid Health Card Record
+11Person Name10...................................1231231234-XL, AF1234567
+12Person Name11...................................1231231234-XL, AF1234567
+13Person Name12...................................1231231234-XL, AF1234567
+14Person Name13...................................1231231234-XL, AF1234567
+15Person Name.....................................1231231234-XL, AF1234567
+Invalid Health Card Record
+17Person Name.....................................1231231234-XL, AF1234567
+18Person Name.....................................1231231234-XL, AF1234567
+Invalid Health Card Record
+20P...............................................1231231234-XL, AF1234567
+21Person Name.....................................1231231234-XL, AF1234567
+22Person Name.....................................1231231234-XL, AF1234567
+Invalid Health Card Record
+24Person Name.....................................1231231234-XL, AF1234567
+25Person Name.....................................1231231234-XL, AF1234567
+
+All records were read successfully!
+Contents of goodInfo.csv
+----------------------------------------------------------------
+2Person Name2,1231231234-XL, AF1234567
+4Person Name3,1231231234-XL, AF1234567
+8Person Name7,1231231234-XL, AF1234567
+11Person Name10,1231231234-XL, AF1234567
+12Person Name11,1231231234-XL, AF1234567
+13Person Name12,1231231234-XL, AF1234567
+14Person Name13,1231231234-XL, AF1234567
+15Person Name,1231231234-XL, AF1234567
+17Person Name,1231231234-XL, AF1234567
+18Person Name,1231231234-XL, AF1234567
+20P,1231231234-XL, AF1234567
+21Person Name,1231231234-XL, AF1234567
+22Person Name,1231231234-XL, AF1234567
+24Person Name,1231231234-XL, AF1234567
+25Person Name,1231231234-XL, AF1234567
