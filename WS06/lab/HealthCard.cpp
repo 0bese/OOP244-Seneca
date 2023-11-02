@@ -7,7 +7,9 @@ using namespace std;
 namespace sdds {
     //Checks the validity of Health Card information
     bool HealthCard::validID(const char* name, long long number, const char vCode[], const char sNumber[]) const {
-        return name && name[0] && number > 999999999 && number < 9999999999 && strlen(vCode) == 2 && strlen(sNumber) == 9;
+        return name != nullptr && strlen(name) > 0 &&
+            number > 999999999 && number < 9999999999 &&
+            strlen(vCode) == 2 && strlen(sNumber) == 9;
     }
 
     //Deallocate memory and set m_name to NULL
@@ -40,25 +42,27 @@ namespace sdds {
 
     //Sets the health card information
     void HealthCard::set(const char* name, long long number, const char vCode[], const char sNumber[]) {
-        delete[] m_name;
-        m_name = nullptr;
-        setEmpty();
         if (validID(name, number, vCode, sNumber)) {
             allocateAndCopy(name);
             m_number = number;
             strcpy(m_vCode, vCode);
             strcpy(m_sNumber, sNumber);
         }
+        else {
+            delete[] m_name;
+            setEmpty();
+        }
     }
 
     //Constructor to initialize the HealthCard
     HealthCard::HealthCard(const char* name, long long number, const char vCode[], const char sNumber[]) {
+        // Initialize the HealthCard using the provided information
         set(name, number, vCode, sNumber);
     }
 
-    //Copy constructor
+    //Copy Constructor
     HealthCard::HealthCard(const HealthCard& hc) {
-        *this = hc;
+        set(hc.m_name, hc.m_number, hc.m_vCode, hc.m_sNumber);
     }
 
     //Assignment operator
@@ -72,6 +76,7 @@ namespace sdds {
     //Destructor to deallocate memory allocated
     HealthCard::~HealthCard() {
         delete[] m_name;
+        m_name = nullptr;
     }
 
     //Conversion operator to check if HealthCard is valid
@@ -81,17 +86,20 @@ namespace sdds {
 
     //Print health card information
     ostream& HealthCard::print(ostream& ostr, bool toFile) const {
-        if (*this) {
+        if (validID(m_name, m_number, m_vCode, m_sNumber)) {
+
             if (toFile) {
-                ostr << m_name;
-                ostr << ',';
+                // Print the HealthCard information with comma separators for file output
+                ostr << m_name << ",";
                 printIDInfo(ostr);
                 ostr << endl;
             }
+
             else {
-                ostr.width(50);
-                ostr.fill('.');
+                // Format and print the HealthCard information with a left-aligned 50-character width
                 ostr.setf(ios::left);
+                ostr.fill('.');
+                ostr.width(50);
                 ostr << m_name;
                 printIDInfo(ostr);
             }
@@ -101,10 +109,12 @@ namespace sdds {
 
     //Reads Health Card information from input stream
     istream& HealthCard::read(istream& istr) {
-        char name[MaxNameLength]{ '\0' };
-        long long number{ 0 };
-        char vCode[3]{ 0 };
-        char sNumber[10]{ 0 };
+        char name[MaxNameLength + 1];
+        long long number;
+        char vCode[3];
+        char sNumber[10];
+
+        // Read the values from the input stream 'istr'
         istr.get(name, MaxNameLength, ',');
         extractChar(istr, ',');
         istr >> number;
@@ -112,20 +122,21 @@ namespace sdds {
         istr.get(vCode, 3, ',');
         extractChar(istr, ',');
         istr.get(sNumber, 10, '\n');
-        extractChar(istr, '\n');
-        if (istr) {
+
+        // If reading was successful, set the HealthCard values
+        if (!istr.fail())  {
             set(name, number, vCode, sNumber);
         }
-        else {
-            istr.clear();
-            istr.ignore(1000, '\n');
-        }
+
+        // Clear any error flags, and ignore any remaining input up to the newline character
+        istr.clear();
+        istr.ignore(1000, '\n');
         return istr;
     }
 
-    //Overloaded output operation to print Health Card
+    //Overloaded output operator to print Health Card
     ostream& operator<<(ostream& ostr, const HealthCard& hc) {
-        if (hc) {
+        if (bool(hc)) {
             hc.print(ostr, false);
         }
         else {
@@ -134,7 +145,7 @@ namespace sdds {
         return ostr;
     }
 
-    //Overloaded input operation to read Health card information
+    //Overloaded input operator to read Health card information
     istream& operator>>(istream& istr, HealthCard& hc) {
         return hc.read(istr);
     }

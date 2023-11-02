@@ -119,4 +119,3 @@ HealthCard ReadCardFromFile(istream& istr) {
    istr >> C;
    return C;
 }
-

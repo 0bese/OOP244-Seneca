@@ -25,6 +25,9 @@ namespace sdds {
       std::ostream& print(std::ostream& ostr, bool toFile = true) const;
       std::istream& read(std::istream& istr);
    };
+
+   std::ostream& operator <<(std::ostream& ostr, const HealthCard& hc);
+   std::istream& operator>>(std::istream& istr, HealthCard& hc);
 }
 #endif // !SDDS_HealthCard_H
 
