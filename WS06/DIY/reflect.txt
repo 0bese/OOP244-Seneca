@@ -1,0 +1,16 @@
+/*==============================================
+Name:           Kojo Anyane Obese
+Student Number: 137653226
+Email:          kaobese@myseneca.ca
+Section:        NHH
+Workshop:       Workshop6_DIY
+==============================================*/
+
+The provided code implements a HealthCard class in C++ that adheres to the
+"Rule of Three" by defining a destructor, copy constructor, and copy assignment 
+operator for proper resource management. The program reads and processes health 
+card data from a CSV file, performs data validation, and outputs valid records 
+to another file, showcasing effective file input and output operations. It includes 
+functions for testing data validation and manual data entry. Overall, the code exemplifies 
+good programming practices and serves as a practical illustration of C++ class design, resource 
+handling, and real-world input/output operations.
