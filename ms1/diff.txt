@@ -1,0 +1,14 @@
+In line number 58 of your output:
+The output should be:
+Date enterd: 2023/12/12
+                ^
+But your output is: 
+Date enterd: 2022/12/12
+                ^
+
+Unmatched character details:
+The character in column 17 is supposed to be:
+  [3] ASCII code(51)
+but you printed
+  [2] ASCII code(50)
+

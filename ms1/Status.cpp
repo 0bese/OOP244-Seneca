@@ -1,91 +1,96 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
 #include "Status.h"
-#include "Utils.h"
+
 using namespace std;
-namespace sdds {
-   Status::Status(const char* c)
-   {
-      ut.alocpy(m_errDesc, c);
-      m_errCode = 0;
-   }
+namespace sdds
+{
+	void Status::setEmpty()
+	{
+		statusOfObj = nullptr;
+		statusCode = 0;
+	}
 
-   Status::Status(const Status& s)
-   {
-      if (s.m_errDesc != nullptr)
-      {
-         ut.alocpy(m_errDesc, s.m_errDesc);
-         m_errCode = s.m_errCode;
-      }
-   }
+	Status::Status(const char* description)
+	{
+		setEmpty();
+		if (description)
+		{
+			delete[] statusOfObj;
+			statusOfObj = new char[strlen(description) + 1];
+			strcpy(statusOfObj, description);
+		}
+		statusCode = 0;
+	}
+	
+	Status& Status::operator=(int code)
+	{
+		statusCode = code;
+		return *this;
+	}
 
-   Status& Status::operator=(const Status& s)
-   {
-      if (this != &s)
-      {
-         if (s.m_errDesc != nullptr)
-         {
-            ut.alocpy(m_errDesc, s.m_errDesc);
-            m_errCode = s.m_errCode;
-         }
-      }
-      return *this;
-   }
+	Status& Status::operator=(const char* description)
+	{
+		if (description)
+		{
+			delete[] statusOfObj;
+			statusOfObj = new char[strlen(description) + 1];
+			strcpy(statusOfObj, description);
+		}
+		return *this;
+	}
 
-   Status::~Status()
-   {
-      clear();
-   }
+	Status::operator int() const
+	{
+		return statusCode;
+	}
 
-   Status& Status::operator=(int num)
-   {
-      m_errCode = num;
-      return *this;
-   }
+	Status::operator const char* () const
+	{
+		return statusOfObj;
+	}
 
-   Status& Status::operator=(const char* str)
-   {
-      ut.alocpy(m_errDesc, str);
-      return *this;
-   }
+	Status::operator bool() const
+	{
+		bool valid = false;
+		if (statusOfObj == nullptr)
+		{
+			valid = true;
+		}
+		return valid;
+	}
 
-   Status::operator int()const
-   {
-      return m_errCode;
-   }
+	Status& Status::clear()
+	{
+		if (statusOfObj)
+		{
+			delete[] statusOfObj;
+			statusOfObj = nullptr;
+		}
+		statusCode = 0;
+		return *this;
+	}
 
-   Status::operator const char* () const
-   {
-      return m_errDesc;
-   }
+	std::ostream& Status::print(std::ostream& os) const
+	{
+		if (this != nullptr)
+		{
+			if (statusCode != 0)
+			{
+				os << "ERR#" << statusCode << ": ";
+			}
+			if (statusOfObj != nullptr)
+			{
+				os << statusOfObj;
+			}
+		}
+		
+		return os;
+	}
 
-   Status::operator bool() const
-   {
-      return m_errDesc == nullptr;
-   }
-
-   Status& Status::clear()
-   {
-      delete[] m_errDesc;
-      m_errDesc = nullptr;
-      m_errCode = 0;
-      return *this;
-   }
-
-   ostream& operator<<(ostream& ostr, const Status& s)
-   {
-      if (!s)
-      {
-         if (int(s) != 0)
-         {
-            ostr << "ERR#" << int(s) << ": " << (const char*)s;
-         }
-         else
-         {
-            ostr << (const char*)s;
-         }
-      }
-      return ostr;
-   }
-
+	std::ostream& operator << (std::ostream& os, const Status& sta)
+	{
+		return sta.print(os);
+	}
 }
