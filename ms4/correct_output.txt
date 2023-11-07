@@ -1,0 +1,138 @@
+Enter the following values:
+4444
+44444
+11111
+Advil Extra Strength Caplets
+22
+2
+22.22
+231212
+<ENTER>
+------------------------
+SKU: 4444
+Value out of range [10000<=val<=39999]: 44444
+Value out of range [10000<=val<=39999]: 11111
+AMA Item:
+SKU: 11111
+Description: Advil Extra Strength Caplets
+Quantity Needed: 22
+Quantity On Hand: 2
+Unit Price: $22.22
+Expiry date (YYMMDD): 231212
+Handling Instructions, ENTER to skip:
+------------------------
+Perishable AMA Item:
+11111: Advil Extra Strength Caplets
+Quantity Needed: 22
+Quantity Available: 2
+Unit Price: $22.22
+Needed Purchase Fund: $444.40
+Expiry date: 2023/12/12
+------------------------
+11111 | Advil Extra Strength Caplets        |    2 |   22 |   22.22 | 2023/12/12
+Enter the following values:
+22222
+Advil
+33
+3
+33.33
+231212
+Keep in room temperature
+------------------------
+SKU: 22222
+AMA Item:
+SKU: 22222
+Description: Advil
+Quantity Needed: 33
+Quantity On Hand: 3
+Unit Price: $33.33
+Expiry date (YYMMDD): 231212
+Handling Instructions, ENTER to skip: Keep in room temperature
+------------------------
+Perishable AMA Item:
+22222: Advil
+Quantity Needed: 33
+Quantity Available: 3
+Unit Price: $33.33
+Needed Purchase Fund: $999.90
+Expiry date: 2023/12/12
+Handling Instructions: Keep in room temperature
+
+------------------------
+22222 | Advil                               |    3 |   33 |   33.33 |*2023/12/12
+--------------------------------------------------------------------------------
+Perishable AMA Item:
+12113: Hydrogen peroxide 100ml bottles
+Quantity Needed: 300
+Quantity Available: 275
+Unit Price: $3.99
+Needed Purchase Fund: $99.75
+Expiry date: 2024/11/11
+Handling Instructions: Keep away from direct sunlight
+----------------------------------
+Just expiry date: 2024/11/11
+linear: ------------------------------------------------------------------------
+12113 | Hydrogen peroxide 100ml bottles     |  275 |  300 |    3.99 |*2024/11/11
+--------------------------------------------------------------------------------
+Perishable AMA Item:
+12345: Baby Formula
+Quantity Needed: 200
+Quantity Available: 140
+Unit Price: $33.99
+Needed Purchase Fund: $2039.40
+Expiry date: 2024/02/12
+----------------------------------
+Just expiry date: 2024/02/12
+linear: ------------------------------------------------------------------------
+12345 | Baby Formula                        |  140 |  200 |   33.99 | 2024/02/12
+--------------------------------------------------------------------------------
+Perishable AMA Item:
+12345: TYLENOL Extra Strength For Fast Pain Relief (100 tablets bottle)
+Quantity Needed: 200
+Quantity Available: 40
+Unit Price: $11.99
+Needed Purchase Fund: $1918.40
+Expiry date: 2025/10/22
+----------------------------------
+Just expiry date: 2025/10/22
+linear: ------------------------------------------------------------------------
+12345 | TYLENOL Extra Strength For Fast Pai |   40 |  200 |   11.99 | 2025/10/22
+--------------------------------------------------------------------------------
+Perishable AMA Item:
+11223: Enfamil A+
+Quantity Needed: 38
+Quantity Available: 3
+Unit Price: $38.99
+Needed Purchase Fund: $1364.65
+Expiry date: 2023/03/11
+Handling Instructions: Keep in a dry and cool place
+----------------------------------
+Just expiry date: 2023/03/11
+linear: ------------------------------------------------------------------------
+11223 | Enfamil A+                          |    3 |   38 |   38.99 |*2023/03/11
+--------------------------------------------------------------------------------
+Perishable AMA Item:
+11111: Advil Extra Strength Caplets
+Quantity Needed: 22
+Quantity Available: 2
+Unit Price: $22.22
+Needed Purchase Fund: $444.40
+Expiry date: 2023/12/12
+----------------------------------
+Just expiry date: 2023/12/12
+linear: ------------------------------------------------------------------------
+11111 | Advil Extra Strength Caplets        |    2 |   22 |   22.22 | 2023/12/12
+--------------------------------------------------------------------------------
+Perishable AMA Item:
+22222: Advil
+Quantity Needed: 33
+Quantity Available: 3
+Unit Price: $33.33
+Needed Purchase Fund: $999.90
+Expiry date: 2023/12/12
+Handling Instructions: Keep in room temperature
+----------------------------------
+Just expiry date: 2023/12/12
+linear: ------------------------------------------------------------------------
+22222 | Advil                               |    3 |   33 |   33.33 |*2023/12/12
+--------------------------------------------------------------------------------
