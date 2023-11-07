@@ -1,25 +1,24 @@
-#ifndef STATUS_H
-#define STATUS_H
+#ifndef SDDS_STATUS_H
+#define SDDS_STATUS_H
 #include <iostream>
-
 namespace sdds
 {
-	class Status
-	{
-	private:
-		char* statusOfObj;
-		int statusCode;
-	public:
-		void setEmpty();
-		Status(const char* description = nullptr);
-		Status& operator=(int code);
-		Status& operator=(const char* descrption);
-		operator int() const;
-		operator const char* () const;
-		operator bool() const;
-		Status& clear();
-		std::ostream& print(std::ostream& os) const;
-	};
-	std::ostream& operator<< (std::ostream& os, const Status& sta);
+   class Status
+   {
+      char* m_errDesc{};
+      int m_errCode;
+   public:
+      Status(const char* c = nullptr);
+      Status(const Status& s);
+      Status& operator=(const Status& s);
+      ~Status();
+      Status& operator=(int num);
+      Status& operator=(const char* str);
+      operator int()const;
+      operator const char* ()const;
+      operator bool()const;
+      Status& clear();
+   };
+   std::ostream& operator<< (std::ostream& ostr, const Status& s);
 }
-#endif//STATUS_H
+#endif
