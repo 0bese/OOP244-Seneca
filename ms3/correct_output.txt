@@ -1,0 +1,85 @@
+Enter the following values:
+abc
+1111
+44444
+Blanket
+abc
+222222
+22
+abc
+222
+2
+abc
+22222222
+22.22
+------------------------
+SKU: abc
+Invalid Integer, retry: 1111
+Value out of range [40000<=val<=99999]: 44444
+AMA Item:
+SKU: 44444
+Description: Blanket
+Quantity Needed: abc
+Invalid Integer, retry: 222222
+Value out of range [1<=val<=9999]: 22
+Quantity On Hand: abc
+Invalid Integer, retry: 222
+Value out of range [0<=val<=22]: 2
+Unit Price: $abc
+Invalid number, retry: 22222222
+Value out of range [0.00<=val<=9999.00]: 22.22
+------------------------
+AMA Item:
+44444: Blanket
+Quantity Needed: 22
+Quantity Available: 2
+Unit Price: $22.22
+Needed Purchase Fund: $444.40
+------------------------
+44444 | Blanket                             |    2 |   22 |   22.22 |
+------------------------
+AMA Item:
+45678: Sleeping Bags
+Quantity Needed: 200
+Quantity Available: 100
+Unit Price: $65.66
+Needed Purchase Fund: $6566.00
+
+AMA Item:
+56789: Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows Tents and Blankets and pillows
+Quantity Needed: 2000
+Quantity Available: 134
+Unit Price: $165.99
+Needed Purchase Fund: $309737.34
+
+AMA Item:
+44444: Flash lights
+Quantity Needed: 400
+Quantity Available: 0
+Unit Price: $5.99
+Needed Purchase Fund: $2396.00
+
+AMA Item:
+44444: Blanket
+Quantity Needed: 22
+Quantity Available: 2
+Unit Price: $22.22
+Needed Purchase Fund: $444.40
+
+------------------------
+------------------------
+56789 | Tents and Blankets and pillows Tent |  129 | 2000 |  165.99 |
+Need: 2000
+Have: 129
+This object is in a good state!
+------------------------
+44444 | Flash lights                        |   10 |  400 |    5.99 |
+Need: 400
+Have: 10
+Price: 5.99
+------------------------
+44444 | Blanket                             |   12 |   22 |   22.22 |
+Need: 22
+Have: 12
+Price: 22.22
+------------------------
