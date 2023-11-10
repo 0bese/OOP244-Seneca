@@ -1,0 +1,21 @@
+/**
+* Kojo Anyane Obese
+* kaobese@myseneca.ca
+* 137653226
+* Nov. 10, 2023
+* I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+*/
+
+
+In this workshop focused on inheritance, the code demonstrates 
+a hierarchy of classes, particularly the relationship between the base class 
+Container and its derived class Pack. The Container class encapsulates properties 
+such as description, capacity, and volume, and defines methods for manipulating 
+and querying these attributes. The Pack class extends Container by introducing 
+additional attributes like size, unit size, and number of units. The use of 
+inheritance is evident in the construction of the Pack class, which inherits from 
+Container and changes its functionality. Notably, the derived class overrides 
+certain methods like print and read to incorporate the extended attributes, maintaining 
+a modular and hierarchical structure. This workshop highlights the benefits of inheritance 
+in facilitating code reuse and enhancing modularity, providing a foundation for 
+building specialized classes while leveraging the functionality of a common base class.
