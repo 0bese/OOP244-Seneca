@@ -1,0 +1,59 @@
+Container Tester.........................
+Milk: (0cc/250)
+****: (**cc/***)
+Adding 200 CCs
+Milk: (200cc/250)
+Adding another 50 CCs
+Milk: (250cc/250)
+Removing 200 CCs
+Milk: (50cc/250)
+Removing another 50 CCs
+Milk: (0cc/250)
+
+Enter 222
+Add to Milk: (0cc/250)
+> 222
+Added 222 CCs
+Milk: (222cc/250)
+
+Enter 222
+Add to Milk: (222cc/250)
+> 222
+Added 28 CCs
+Milk: (250cc/250)
+Trying to read into broken container...
+Broken Container, adding aborted! Press <ENTER> to continue....
+Clearing the broken container, setting it to an empty 200 CC water container...
+Adding 150 CCs of water...
+Now the container has:
+Water: (150cc/200)
+Pack Tester.........................
+Pepsi: (0cc/7920), 0 in a pack of 24
+Added 14 cans of 330 CCs
+Pepsi: (4620cc/7920), 14 in a pack of 24
+Added 10 cans of 330 CCs
+Pepsi: (7920cc/7920), 24 in a pack of 24
+Removed 14 cans of 330 CCs
+Pepsi: (3300cc/7920), 10 in a pack of 24
+Removed 10 cans of 330 CCs
+
+Enter 14
+Add to Pepsi: (0cc/7920), 0 in a pack of 24
+> 14
+Added 14
+Pepsi: (4620cc/7920), 14 in a pack of 24
+
+Enter 14 and then 10
+Add to Pepsi: (4620cc/7920), 14 in a pack of 24
+> 14
+Value out of range [1<=val<=10]: 10
+Added 10
+Pepsi: (7920cc/7920), 24 in a pack of 24
+Trying to add to a full pack...
+Pack is full!, press <ENTER> to continue...
+Printing the broken pack of Olive oil...
+Broken Container, adding aborted! Press <ENTER> to continue....
+Clearing the broken pack and filling it with wine...
+Now pack has Wine: (0cc/9000), 0 in a pack of 12
+Adding 5 to the pack
+Wine: (3750cc/9000), 5 in a pack of 12

@@ -9,7 +9,7 @@ namespace sdds
 	{
 		Year = 0;
 		Month = 0;
-		Day = 0;
+		Day = 0; 
 		State = nullptr;
 		Formatted = true;
 	}

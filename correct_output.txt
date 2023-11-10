@@ -1,0 +1,166 @@
+Enter the following to test MS2:
+ abc
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 0
+--------
+Invalid Menu!
+Testing Invalid Menu: 0
+-----------------------------------------
+Aid Management System
+Date: 2023/12/09
+Data file: No file
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 0
+Exiting Program!
+Aid Management System
+Date: 2023/12/09
+Data file: fakeFileName.csv
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 1
+
+****List Items****
+
+Aid Management System
+Date: 2023/12/09
+Data file: fakeFileName.csv
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 2
+
+****Add Item****
+
+Aid Management System
+Date: 2023/12/09
+Data file: fakeFileName.csv
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 3
+
+****Remove Item****
+
+Aid Management System
+Date: 2023/12/09
+Data file: fakeFileName.csv
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 4
+
+****Update Quantity****
+
+Aid Management System
+Date: 2023/12/09
+Data file: fakeFileName.csv
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 5
+
+****Sort****
+
+Aid Management System
+Date: 2023/12/09
+Data file: fakeFileName.csv
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 6
+
+****Ship Items****
+
+Aid Management System
+Date: 2023/12/09
+Data file: fakeFileName.csv
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 7
+
+****New/Open Aid Database****
+
+Aid Management System
+Date: 2023/12/09
+Data file: fakeFileName.csv
+
+1- List Items
+2- Add Item
+3- Remove Item
+4- Update Quantity
+5- Sort
+6- Ship Items
+7- New/Open Aid Database
+---------------------------------
+0- Exit
+> 8
+Value out of range [0<=val<=7]: 0
+Exiting Program!
