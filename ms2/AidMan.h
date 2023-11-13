@@ -7,7 +7,7 @@ namespace sdds
 {
     class AidMan
     {
-    protected:
+    private:
         char* fileName;
         Menu option;
 
