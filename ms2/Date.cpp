@@ -1,3 +1,15 @@
+/*
+	==================================================
+	Mile Stone 2
+	==================================================
+	Name   : Kojo Anyane Obese
+	ID     : 137653226
+	Email  : kaobese@myseneca.ca
+	Section: NHH
+	Date   : 2023/11/16
+// I have done all the coding by myself and only copied the code that
+my professor provided to complete my workshops and assignments.//
+*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include "Date.h"
@@ -36,7 +48,7 @@ namespace sdds
 			State = 3;
 			valid = false;
 		}
-	
+
 		return valid;
 	}
 
@@ -66,7 +78,7 @@ namespace sdds
 		}
 	}
 
-	bool Date::operator== (Date& date)
+	bool Date::operator==(Date &date)
 	{
 		bool valid = false;
 		if (uniqDateValue() == date.uniqDateValue())
@@ -76,7 +88,7 @@ namespace sdds
 		return valid;
 	}
 
-	bool Date::operator!= (Date& date)
+	bool Date::operator!=(Date &date)
 	{
 		bool valid = false;
 		if (uniqDateValue() != date.uniqDateValue())
@@ -86,7 +98,7 @@ namespace sdds
 		return valid;
 	}
 
-	bool Date::operator> (Date& date)
+	bool Date::operator>(Date &date)
 	{
 		bool valid = false;
 		if (uniqDateValue() > date.uniqDateValue())
@@ -96,7 +108,7 @@ namespace sdds
 		return valid;
 	}
 
-	bool Date::operator< (Date& date)
+	bool Date::operator<(Date &date)
 	{
 		bool valid = false;
 		if (uniqDateValue() < date.uniqDateValue())
@@ -106,7 +118,7 @@ namespace sdds
 		return valid;
 	}
 
-	bool Date::operator>= (Date& date)
+	bool Date::operator>=(Date &date)
 	{
 		bool valid = false;
 		if (uniqDateValue() >= date.uniqDateValue())
@@ -116,7 +128,7 @@ namespace sdds
 		return valid;
 	}
 
-	bool Date::operator<= (Date& date) 
+	bool Date::operator<=(Date &date)
 	{
 		bool valid = false;
 		if (uniqDateValue() <= date.uniqDateValue())
@@ -126,12 +138,12 @@ namespace sdds
 		return valid;
 	}
 
-	const Status& Date::state() const
+	const Status &Date::state() const
 	{
 		return this->State;
 	}
 
-	Date& Date::formatted(bool valid) 
+	Date &Date::formatted(bool valid)
 	{
 		Formatted = valid;
 		return *this;
@@ -142,7 +154,7 @@ namespace sdds
 		return Formatted;
 	}
 
-	std::ostream& Date::write(std::ostream& os) const
+	std::ostream &Date::write(std::ostream &os) const
 	{
 		if (Formatted)
 		{
@@ -167,17 +179,17 @@ namespace sdds
 		return os;
 	}
 
-	std::istream& Date::read(std::istream& is)
+	std::istream &Date::read(std::istream &is)
 	{
 		int date;
-		is >> date;	
+		is >> date;
 		if (is)
 		{
 			if (date >= 100000 && date <= 999999)
 			{
 				Day = date % 100;
 				Month = (date % 10000 - Day) / 100;
-				Year = date/10000 + 2000;
+				Year = date / 10000 + 2000;
 			}
 			else if (date >= 100 && date <= 9999)
 			{
@@ -202,7 +214,7 @@ namespace sdds
 			State = 0;
 		}
 		is.ignore(1000, '\n');
-	
+
 		return is;
 	}
 	Date::~Date()
@@ -210,12 +222,12 @@ namespace sdds
 		State.clear();
 	}
 
-	std::ostream& operator<< (std::ostream& os, const Date& date)
+	std::ostream &operator<<(std::ostream &os, const Date &date)
 	{
 		return date.write(os);
-	} 
+	}
 
-	std::istream& operator>> (std::istream& is, Date& date)
+	std::istream &operator>>(std::istream &is, Date &date)
 	{
 		return date.read(is);
 	}

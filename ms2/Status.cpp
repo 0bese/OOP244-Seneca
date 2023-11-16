@@ -1,3 +1,15 @@
+/*
+	==================================================
+	Mile Stone 2
+	==================================================
+	Name   : Kojo Anyane Obese
+	ID     : 137653226
+	Email  : kaobese@myseneca.ca
+	Section: NHH
+	Date   : 2023/11/16
+// I have done all the coding by myself and only copied the code that
+my professor provided to complete my workshops and assignments.//
+*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
@@ -12,7 +24,7 @@ namespace sdds
 		statusCode = 0;
 	}
 
-	Status::Status(const char* description)
+	Status::Status(const char *description)
 	{
 		setEmpty();
 		if (description)
@@ -23,14 +35,14 @@ namespace sdds
 		}
 		statusCode = 0;
 	}
-	
-	Status& Status::operator=(int code)
+
+	Status &Status::operator=(int code)
 	{
 		statusCode = code;
 		return *this;
 	}
 
-	Status& Status::operator=(const char* description)
+	Status &Status::operator=(const char *description)
 	{
 		if (description)
 		{
@@ -46,7 +58,7 @@ namespace sdds
 		return statusCode;
 	}
 
-	Status::operator const char* () const
+	Status::operator const char *() const
 	{
 		return statusOfObj;
 	}
@@ -61,7 +73,7 @@ namespace sdds
 		return valid;
 	}
 
-	Status& Status::clear()
+	Status &Status::clear()
 	{
 		if (statusOfObj)
 		{
@@ -72,7 +84,7 @@ namespace sdds
 		return *this;
 	}
 
-	std::ostream& Status::print(std::ostream& os) const
+	std::ostream &Status::print(std::ostream &os) const
 	{
 		if (this != nullptr)
 		{
@@ -85,11 +97,11 @@ namespace sdds
 				os << statusOfObj;
 			}
 		}
-		
+
 		return os;
 	}
 
-	std::ostream& operator << (std::ostream& os, const Status& sta)
+	std::ostream &operator<<(std::ostream &os, const Status &sta)
 	{
 		return sta.print(os);
 	}

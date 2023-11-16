@@ -1,14 +1,29 @@
+/*
+	==================================================
+	Mile Stone 2
+	==================================================
+	Name   : Kojo Anyane Obese
+	ID     : 137653226
+	Email  : kaobese@myseneca.ca
+	Section: NHH
+	Date   : 2023/11/16
+// I have done all the coding by myself and only copied the code that
+my professor provided to complete my workshops and assignments.//
+*/
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
 #include "AidMan.h"
+#include "Menu.h"
 #include "Date.h"
 
 using namespace std;
-namespace sdds {
-    AidMan::AidMan(const char* filename) : fileName(nullptr), option("1- List Items\n2- Add Item\n3- Remove Item\n4- Update Quantity\n5- Sort\n6- Ship Items\n7- New/Open Aid Database\n---------------------------------\n")
+namespace sdds
+{
+	AidMan::AidMan(const char *filename) : fileName(nullptr), option("1- List Items\n2- Add Item\n3- Remove Item\n4- Update Quantity\n5- Sort\n6- Ship Items\n7- New/Open Aid Database\n---------------------------------\n")
 	{
-		if (filename)
+		if (filename != nullptr)
 		{
 			fileName = new char[strlen(filename) + 1];
 			strcpy(fileName, filename);
@@ -28,12 +43,12 @@ namespace sdds {
 		{
 			cout << "Data file: No file" << endl;
 		}
-		cout << "---------------------------------" << endl;
+		cout << endl;
 		select = option.Menu::run();
 		return select;
 	}
 
-	void AidMan::searchList(const char* menu, int select)
+	void AidMan::searchList(const char *menu, int select)
 	{
 		char list[30];
 		int menuLen = 0;
@@ -76,7 +91,8 @@ namespace sdds {
 						cout << list[i];
 					}
 				}
-				cout << "****\n" << endl;
+				cout << "****\n"
+					 << endl;
 			}
 		}
 	}
