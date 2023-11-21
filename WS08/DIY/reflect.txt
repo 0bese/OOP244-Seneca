@@ -1,0 +1,19 @@
+/**
+ * Name: Kojo Anyane Obese
+ * Email: kaobese@myseneca.ca
+ * Student ID: 137653227
+ * Date: November 17, 2023
+ * I have done all the coding by myself and only
+ * copied the code that my professor provided to
+ * complete my workshops and assignments.
+ */
+ 
+In Workshop 8, the principles of abstraction and interface in C++ are skillfully applied through
+the design of classes such as Shape, LblShape, Line, and Rectangle. Abstraction is achieved by
+encapsulating implementation details within the base class (Shape) and its derived classes,
+providing a clear interface through virtual functions. Inheritance facilitates code reuse and
+extension, and dynamic memory management is employed for resource handling. The use of namespaces
+ensures a well-organized structure, and operator overloading enhances the readability of input and
+output operations. File I/O demonstrates the versatility of these abstractions. Overall, the
+workshop effectively leverages object-oriented principles to create a modular and extensible
+system for representing and manipulating shapes in C++.

@@ -1,28 +1,27 @@
-//
-//  Shape.h
-//  WS08
-//
-//  Created by Kojo Anyane Obese on 2023-11-17.
-//
+/**
+ * Name: Kojo Anyane Obese
+ * Email: kaobese@myseneca.ca
+ * Student ID: 137653227
+ * Date: November 17, 2023
+ * I have done all the coding by myself and only
+ * copied the code that my professor provided to
+ * complete my workshops and assignments.
+ */
 
-#ifndef Shape_h
-#define Shape_h
+#ifndef SDDS_SHAPE_H
+#define SDDS_SHAPE_H
 #include <iostream>
-
-using namespace std;
 namespace sdds
 {
-
-    struct Shape
+    class Shape
     {
-        virtual void draw(ostream &os) const = 0;
-        virtual void getSpecs(istream &is) const = 0;
+    public:
+        virtual void draw(std::ostream &ostr) const = 0;
+        virtual void getSpecs(std::istream &istr) = 0;
         virtual ~Shape();
     };
-
-    ostream &operator<<(ostream &os, const Shape &shape);
-    istream &operator>>(istream &is, Shape &shape);
-
+    std::ostream &operator<<(std::ostream &ostr, Shape &s);
+    std::istream &operator>>(std::istream &istr, Shape &s);
 }
 
-#endif /* Shape_h */
+#endif /* SDDS_SHAPE_H */
