@@ -1,0 +1,20 @@
+/**
+ * Name: Kojo Anyane Obese
+ * Email: kaobese@myseneca.ca
+ * Student ID: 137653227
+ * Date: November 26, 2023
+ * I have done all the coding by myself and only
+ * copied the code that my professor provided to
+ * complete my workshops and assignments.
+ */
+
+The workshop on inheritance with resources centered around the effective management of dynamic
+memory in both the "Student" base class and its derived class "Graduate." Participants gained
+practical insights into the implementation of the Rule of Three, as outlined in the "Student.cpp"
+and "Graduate.cpp" files. These files encapsulate the necessary constructors, destructors, copy
+constructors, and copy assignment operators to ensure proper resource handling. Through
+discussions and hands-on exercises involving the "main.cpp" file, attendees learned the
+significance of releasing memory before allocating new memory, a critical practice in preventing
+memory leaks. This workshop provided a valuable opportunity to apply memory management techniques
+in a real-world context, emphasizing the importance of meticulous resource handling in C++
+programming.

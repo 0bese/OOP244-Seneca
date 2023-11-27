@@ -21,7 +21,7 @@ my professor provided to complete my workshops and assignments.//
 using namespace std;
 namespace sdds
 {
-	AidMan::AidMan(const char *filename) : fileName(nullptr), option("1- List Items\n2- Add Item\n3- Remove Item\n4- Update Quantity\n5- Sort\n6- Ship Items\n7- New/Open Aid Database\n---------------------------------\n")
+	AidMan::AidMan(const char *filename) : fileName(nullptr), option("1- List Items\t\n2- Add Item\t\n3- Remove Item\t\n4- Update Quantity\t\n5- Sort\t\n6- Ship Items\t\n7- New/Open Aid Database\n---------------------------------\n")
 	{
 		if (filename != nullptr)
 		{

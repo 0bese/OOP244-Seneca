@@ -34,7 +34,7 @@ namespace sdds
             menuContent = new char[strlen(menu) + 1];
             strcpy(menuContent, menu);
 
-            numOfOption = 7; // Minimum number of options is 1
+            numOfOption = 1; // Minimum number of options is 1
             for (size_t i = 0; i < strlen(menu); i++)
             {
                 if (menu[i] == '\t')
