@@ -15,6 +15,7 @@ namespace sdds
 {
     class Student
     {
+    private:
         char *name{};
         int age;
 
