@@ -18,21 +18,18 @@ namespace sdds
     {
         safeEmpty();
     }
-
     // Parameterized constructor
     Student::Student(const char *studentName, int studentAge)
     {
         setName(studentName);
         age = studentAge;
     }
-
     // Copy constructor
     Student::Student(const Student &other)
     {
         safeEmpty();
         *this = other;
     }
-
     // Copy assignment operator
     Student &Student::operator=(const Student &other)
     {
@@ -44,21 +41,18 @@ namespace sdds
         }
         return *this;
     }
-
     // Destructor
     Student::~Student()
     {
         delete[] name;
         name = nullptr;
     }
-
     // Display method
     void Student::display() const
     {
         std::cout << "Name: " << name << std::endl;
         std::cout << "Age: " << age << std::endl;
     }
-
     // Private method to set the name dynamically
     void Student::setName(const char *studentName)
     {
@@ -72,7 +66,6 @@ namespace sdds
             name = nullptr;
         }
     }
-
     void Student::safeEmpty()
     {
         name = nullptr;
